@@ -1,0 +1,137 @@
+:root {
+  --verde: #0f5257;                
+  --coral: rgb(224, 99, 76);        
+  --areia: hsl(42, 70%, 94%);     
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--verde);
+  background: var(--areia);
+}
+
+h1, h2, h3 {
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.25;
+}
+
+h1 { font-size: 2.6rem; }  
+h2 { font-size: 1.9rem; }  
+h3 { font-size: 1.3rem; }  
+
+.topo {
+  background: var(--verde);
+  color: var(--areia);
+  border-bottom: 6px solid var(--coral);
+  padding: 40px 20px;
+}
+
+.topo-conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.topo p {
+  font-style: italic;
+  margin-top: 6px;
+}
+
+.pagina {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 40px;
+  align-items: start;
+}
+
+.artigo h2 {
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: var(--coral);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.artigo p {
+  margin-bottom: 18px;
+}
+
+.artigo h3 {
+  margin: 28px 0 6px;
+}
+
+code {
+  background: rgb(15 82 87 / 0.1);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 24px;
+  background: var(--coral);
+  color: var(--areia);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+.botao:hover {
+  background: var(--verde);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
+.lateral {
+  border-top: 4px solid var(--coral);
+  padding-top: 16px;
+  font-size: 0.95rem;
+}
+
+.lateral h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.lateral h3 {
+  font-size: 1.05rem;
+  margin: 20px 0 6px;
+}
+
+.lateral ul {
+  padding-left: 20px;
+}
+
+.rodape {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 24px 20px 32px;
+  border-top: 1px solid rgb(15 82 87 / 0.25);
+}
+
+@media (max-width: 760px) {
+  .pagina {
+    grid-template-columns: 1fr;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+}
